@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import SpotCard from "../SpotCard/SpotCard";
+// import SpotCard from "../SpotCard/SpotCard";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -16,17 +16,17 @@ const MyList = () => {
     );
   }
   useEffect(() => {
-    fetch(`http://localhost:5000/touristsSpots/myList${url.search}`)
+    fetch(`https://nature-tourism-server-production.up.railway.app/touristsSpots/myList${url.search}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setMylists(data);
       });
   }, [url]);
 
-  console.log(url);
+  // console.log(url);
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -37,12 +37,12 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/touristsSpots/${id}`, {
+        fetch(`https://nature-tourism-server-production.up.railway.app/touristsSpots/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",

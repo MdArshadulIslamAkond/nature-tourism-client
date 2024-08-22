@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FcIphone } from "react-icons/fc";
 import { IoMail } from "react-icons/io5";
 import { MdArrowCircleRight } from "react-icons/md";
-import { PiPhoneFill, PiPhoneThin } from "react-icons/pi";
+import { PiPhoneFill} from "react-icons/pi";
 
 const Footer = () => {
   return (

@@ -6,7 +6,7 @@ const Countries = () => {
   // const countries = useLoaderData();
   //   const { country_name, photo, description } = countriess;
   useEffect(() => {
-    fetch("http://localhost:5000/countriess")
+    fetch("https://nature-tourism-server-production.up.railway.app/countriess")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);

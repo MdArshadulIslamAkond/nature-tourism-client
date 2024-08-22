@@ -24,17 +24,17 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: < Home />,
-        loader: ()=> fetch('http://localhost:5000/touristsSpots')
+        loader: ()=> fetch('https://nature-tourism-server-production.up.railway.app/touristsSpots')
       },
       {
         path: "viewSpot/:id",
         element: <PrivetRoute><ViewDetails /></PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristsSpots/${params.id}`)
+        loader: ({params}) => fetch(`https://nature-tourism-server-production.up.railway.app/touristsSpots/${params.id}`)
       },
       {
         path: "allToristsSport",
         element: < AllTouristsSport />,
-        loader: ()=> fetch('http://localhost:5000/touristsSpots')
+        loader: ()=> fetch('https://nature-tourism-server-production.up.railway.app/touristsSpots')
       },
       {
         path: "addTouristSpot",
@@ -47,12 +47,12 @@ const Router = createBrowserRouter([
       {
         path: "myList/updatePage/:id",
         element: <PrivetRoute><UpdatePage/></PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/touristsSpots/${params.id}`)
+        loader: ({params}) => fetch(`https://nature-tourism-server-production.up.railway.app/touristsSpots/${params.id}`)
       },
       {
         path:"countriesSpot/:id",
         element: <CountriesSpot />,
-        loader: ({params}) => fetch(`http://localhost:5000/countriesSpots/${params.id}`)
+        loader: ({params}) => fetch(`https://nature-tourism-server-production.up.railway.app/countriesSpots/${params.id}`)
       },
       {
         path: "addCountry",

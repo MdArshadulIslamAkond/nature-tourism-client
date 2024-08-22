@@ -48,10 +48,10 @@ const UpdatePage = () => {
       user_email,
       user_name,
     };
-    console.log(newSpot);
+    // console.log(newSpot);
 
     //send data to the server
-    fetch(`http://localhost:5000/touristsSpots/${_id}`, {
+    fetch(`https://nature-tourism-server-production.up.railway.app/touristsSpots/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const UpdatePage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.modifiedCount) {
           Swal.fire({
             title: "success",

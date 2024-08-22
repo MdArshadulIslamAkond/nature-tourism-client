@@ -3,18 +3,6 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CountriesSpot = () => {
   const countriesSpot = useLoaderData();
-  // const {_id,
-  //     spot_name,
-  //     country_name,
-  //     location,
-  //     time,
-  //     cost,
-  //     description,
-  //     seasonality,
-  //     totalVisitor,
-  //     photo,
-  //     user_email,
-  //     user_name,} = spot;
   return (
     <div>
       <h1>Countries Spot Length:{countriesSpot.length}</h1>

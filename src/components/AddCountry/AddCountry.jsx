@@ -8,10 +8,10 @@ const AddCountry = () => {
     const country_name = form.get("country_name");
     const photo = form.get("photo");
     const description = form.get("description");
-    console.log(country_name, photo, description);
+    // console.log(country_name, photo, description);
     const newCountry = { country_name, photo, description };
     // addCountryToFirestore(country_name, photo);
-    fetch("http://localhost:5000/countriess", {
+    fetch("https://nature-tourism-server-production.up.railway.app/countriess", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

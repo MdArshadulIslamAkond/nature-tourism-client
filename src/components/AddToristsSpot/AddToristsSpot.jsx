@@ -32,10 +32,10 @@ const AddToristsSpot = () => {
       user_email,
       user_name,
     }
-    console.log(newSpot);
+    // console.log(newSpot);
 
     //send data to the server
-    fetch('http://localhost:5000/touristsSpots', {
+    fetch('https://nature-tourism-server-production.up.railway.app/touristsSpots', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const AddToristsSpot = () => {
     })
     .then(res=>res.json())
     .then(data=>{
-      console.log(data)
+      // console.log(data)
       if(data.insertedId){
         Swal.fire({
           title: 'success',
